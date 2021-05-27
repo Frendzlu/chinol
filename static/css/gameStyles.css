@@ -1,0 +1,223 @@
+body {
+    background-color: tan;
+    margin: 0 auto;
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+#row {
+    display: flex;
+    flex-direction: row;
+}
+
+#sidePanel {
+    width: calc(100vw - 100vh);
+    background-color: #eaeaea;
+    border-left: 5px solid black;
+}
+
+#gameArea {
+    margin-top: 0.3vh;
+    width: 100vh;
+    height: 100vh;
+    background: url("../graphics/bg.png");
+    background-size: contain;
+}
+
+h1 {
+    text-align: center;
+}
+
+.huidzong {
+    text-align: center;
+    font-size: 64pt;
+    margin-top: 0;
+    background-color: chartreuse;
+}
+
+table {
+    width: 90vh;
+    height: 90vh;
+    margin-top: 5vh;
+    margin-left: 5vh;
+    border-collapse: collapse;
+}
+
+td {
+    width: 9vh;
+    height: 7.5vh;
+}
+
+tr {
+    width: fit-content;
+    height: fit-content;
+}
+
+.blank-tile {
+    border: 1px solid black;
+    background-image: url("../graphics/blank-tile.png");
+    background-size: contain;
+}
+
+.turquoise-tile {
+    border: 1px solid black;
+    background-image: url("../graphics/turquoise/tile.png");
+    background-size: contain;
+}
+
+.crimson-tile {
+    border: 1px solid black;
+    background-image: url("../graphics/crimson/tile.png");
+    background-size: contain;
+}
+
+.golden-tile {
+    border: 1px solid black;
+    background-image: url("../graphics/golden/tile.png");
+    background-size: contain;
+}
+
+.lime-tile {
+    border: 1px solid black;
+    background-image: url("../graphics/lime/tile.png");
+    background-size: contain;
+}
+
+#field-60 {
+    background: url("../graphics/center-tile.png");
+    background-size: contain;
+}
+
+.list-row {
+    margin-left: 5%;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+}
+
+.Progress_Status {
+    margin-top: 0.5rem;
+    height: 2rem;
+    width: 40%;
+    border: 5px solid black;
+    border-radius: 35px;
+    line-height: 2rem;
+    color: #fff;
+    text-shadow: 2px 0 0 #000, 0 -2px 0 #000, 0 2px 0 #000, -2px 0 0 #000;
+}
+
+.innerBar {
+    width: 0%;
+    height: 2rem;
+    background-color: #4CAF50;
+    border-radius: 35px;
+    text-align: center;
+    overflow: visible;
+}
+#field-12 {
+    background: url("../graphics/turquoise/top-left.png");
+    background-size: contain;
+}
+#field-13 {
+    background: url("../graphics/turquoise/top-right.png");
+    background-size: contain;
+}
+#field-23 {
+    background: url("../graphics/turquoise/bot-left.png");
+    background-size: contain;
+}
+#field-24 {
+    background: url("../graphics/turquoise/bot-right.png");
+    background-size: contain;
+}
+#field-19 {
+    background: url("../graphics/crimson/top-left.png");
+    background-size: contain;
+}
+#field-20 {
+    background: url("../graphics/crimson/top-right.png");
+    background-size: contain;
+}
+#field-30 {
+    background: url("../graphics/crimson/bot-left.png");
+    background-size: contain;
+}
+#field-31 {
+    background: url("../graphics/crimson/bot-right.png");
+    background-size: contain;
+}
+#field-89 {
+    background: url("../graphics/golden/top-left.png");
+    background-size: contain;
+}
+#field-90 {
+    background: url("../graphics/golden/top-right.png");
+    background-size: contain;
+}
+#field-100 {
+    background: url("../graphics/golden/bot-left.png");
+    background-size: contain;
+}
+#field-101 {
+    background: url("../graphics/golden/bot-right.png");
+    background-size: contain;
+}
+#field-96 {
+    background: url("../graphics/lime/top-left.png");
+    background-size: contain;
+}
+#field-97 {
+    background: url("../graphics/lime/top-right.png");
+    background-size: contain;
+}
+#field-107 {
+    background: url("../graphics/lime/bot-left.png");
+    background-size: contain;
+}
+#field-108 {
+    background: url("../graphics/lime/bot-right.png");
+    background-size: contain;
+}
+
+.lime-token {
+    background: url("../graphics/lime/token.png");
+}
+.golden-token {
+    background: url("../graphics/golden/token.png");
+}
+.crimson-token {
+    background: url("../graphics/crimson/token.png");
+}
+.turquoise-token {
+    background: url("../graphics/turquoise/token.png");
+}
+.piece {
+    width: 77%;
+    height: 80%;
+    margin-top: 0%;
+    margin-left: 11%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.pos-token {
+    box-shadow:
+        0 0 20px 10px #fff,
+        0 0 40px 20px #f0f
+}
+.pos-dest {
+    box-shadow:
+        0 0 20px 10px #fff,
+        0 0 40px 20px #af4
+}
+.pos-dest::after {
+    background-color: rgba(200, 70, 140, 0.4);
+}
+.overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+}

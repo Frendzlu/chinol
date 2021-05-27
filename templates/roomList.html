@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Template</title>
+<meta charset="UTF-8">
+<base href=".">
+<link rel="stylesheet" href="../static/css/cleanStyles.css">
+<link rel="shortcut icon" href="..{{ url_for('static', filename='favicon.ico') }}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<body>
+    <div id="lists">
+        {% if data.roomsOngoing.items()|length != 0 %}
+        <div id="list-ongoing-main"  class="list-container">
+            <h1 class="list-header">Ongoing Rooms</h1>
+            <div id="list-ongoing" class="list-content">
+                {% for key, room in data.roomsOngoing.items() %}
+                    <a href="./room/{{key}}"><div class="list-element"> <p class="room-name">Room #{{key}}</p><p class="num-of-players"> {{room.players|count}}/4</p></div></a>
+                {% endfor %}
+            </div> 
+            <button class="list-button btn-spec" id='randomOngoing' style="border-top: 5px solid #3c3a74"> Random ongoing game </button>
+        </div>
+        {% else %}
+        <div style="height: 32vh;">
+
+        </div>
+        {% endif %}
+        <div style="display: flex; width: 50vw; height: 5rem; margin-top: 2.5vh; border: 5px solid #3c3a74;">
+            <button class="list-button btn-norm" id='join' style="border-right: 5px solid #3c3a74;"> Join! </button>
+            <button class="list-button btn-norm" id='newGameButton'> Make new game! </button>
+        </div>
+        
+    </div>
+    <!--
+        <div class="overlay">
+            <div id="error-msg">
+                {{error}}
+            </div>
+        </div>
+    -->
+</body>
+<script type="module">
+    import Requests from '../static/scripts/requests.mjs' 
+    try{
+        document.getElementById("randomOngoing").addEventListener("click", function(){Requests.DOMrequest('./randomOngoing', 'POST')});
+    }
+    catch(e){
+        console.log(e)
+    }
+    document.getElementById("join").addEventListener("click", function(){Requests.DOMrequest('./join', 'POST')});
+    document.getElementById("newGameButton").addEventListener("click", function(){Requests.DOMrequest('./makeroom', 'POST')});
+</script>
+
+</html>

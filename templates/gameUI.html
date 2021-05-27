@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Template</title>
+<meta charset="UTF-8">
+<base href=".">
+<link rel="shortcut icon" href="..{{ url_for('static', filename='favicon.ico') }}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../static/css/cubeStyles.css">
+<link rel="stylesheet" href="../static/css/gameStyles.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../static/font-osom/css/all.css">
+<body style="font-family: 'Permanent Marker', cursive;">
+    <div id="row">
+        <div id="gameArea">
+            <table id="table">
+            </table>
+        </div>
+        <div id="sidePanel">
+            <h1 class="huidzong">徽宗</h1>
+            <div id="playerList">
+                <h1>Players</h1>
+            </div>
+            <div id="animated-cube" style="margin-top: 10%">
+                <section class="container">
+                    <div id="cube">
+                        <div class="front">
+                            <span class="dot dot1"></span>
+                        </div>
+                        <div class="back">
+                            <span class="dot dot1"></span>
+                            <span class="dot dot2"></span>
+                        </div>
+                        <div class="right">
+                            <span class="dot dot1"></span>
+                            <span class="dot dot2"></span>
+                            <span class="dot dot3"></span>
+                        </div>
+                        <div class="left">
+                            <span class="dot dot1"></span>
+                            <span class="dot dot2"></span>
+                            <span class="dot dot3"></span>
+                            <span class="dot dot4"></span>
+                        </div>
+                        <div class="top">
+                            <span class="dot dot1"></span>
+                            <span class="dot dot2"></span>
+                            <span class="dot dot3"></span>
+                            <span class="dot dot4"></span>
+                            <span class="dot dot5"></span>
+                        </div>
+                        <div class="bottom">
+                            <span class="dot dot1"></span>
+                            <span class="dot dot2"></span>
+                            <span class="dot dot3"></span>
+                            <span class="dot dot4"></span>
+                            <span class="dot dot5"></span>
+                            <span class="dot dot6"></span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div id="rollBtn"></div>
+            <div id="clockDiv"></div>
+            <form>
+                <select>
+                </select>
+            </form>
+        </div>
+    </div>
+</body>
+<script type="module">
+    import UIDisplay from '../static/scripts/uiDisplay.mjs';
+    UIDisplay.starterPack()
+</script>
+<script>
+    //for testing purposes
+    function animateThrow(y, x) {
+        cube.style.webkitTransform = 'rotateX(' + x + 'deg) rotateY(' + y + 'deg)';
+        cube.style.transform = 'rotateX(' + x + 'deg) rotateY(' + y + 'deg)';
+    }
+</script>
+</html>

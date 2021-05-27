@@ -1,0 +1,82 @@
+#lists {
+    width: 50vw;
+    margin-left: 25vw;
+    margin-top: 10vh;
+    height: 80vh;
+}
+.list-content {
+    overflow: auto;
+    width: 20vw;
+    height: 60vh;
+}
+.list-header {
+    line-height: 32pt;
+    font-size: 32pt;
+    text-align: center;
+}
+.list-container{
+    width: 50%;
+    margin-left: 25%;
+    align-items: center;
+    align-content: center;
+    border: 5px solid #3c3a74;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.roundify{
+    border-radius: 50%;
+}
+.list-button {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16pt;
+    line-height: 100%;
+    border: 0px solid white;
+}
+.btn-spec{
+    width: 102%;
+    height: 5rem;  
+}
+.btn-norm
+{
+    width: 50%;
+    height: 5rem;
+}
+.list-element {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.piece {
+    width: 80%;
+    height: 80%;
+    margin-top: 10%;
+    margin-left: 10%;
+}
+.overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#error-msg{
+    margin: 0 auto;
+    margin-top: 40vh;
+    width: 30vw;
+    height: 20vh;
+    font-size: 32pt;
+    line-height: 32pt;
+    text-align: center;
+}
+body{
+    background-color: black;
+    color: white;
+}

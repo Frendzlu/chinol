@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Template</title>
+<meta charset="UTF-8">
+<base href=".">
+<link rel="shortcut icon" href="..{{ url_for('static', filename='favicon.ico') }}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" href="../static/font-osom/css/all.css">
+<body>
+    <form id="form" onsubmit="return false">
+        <h1>Enter your nickname</h1>
+        <div class="grouping-div">
+            <input type='text' name='nick' id="nickname" placeholder="nickname"/>
+            <button id="sumb-button"><i class="fas fa-angle-right"></i></button>
+        </div>
+        <input type='submit' id="subm" style="display:none"/>
+     </form>
+</body>
+<script type="module">
+    import Requests from "../static/scripts/requests.mjs";
+    document.getElementById("form").addEventListener("submit", Requests.sendNick);
+    document.getElementById("nickname").addEventListener("keypress", function(event){
+        if(event.keyCode == 13){
+            event.preventDefault();
+            document.getElementById("subm").click();
+        }
+    });
+</script>
+<style>
+    #form{
+        font-family: 'Permanent Marker', cursive;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 40vh;
+    }
+    #nickname{
+        height: 2.3rem;
+        text-align: center;
+        width: calc(20vw - 2.7rem);
+        border: 0px solid #3c3a74;
+        font-family: 'Permanent Marker', cursive;
+        font-size: 16pt;
+        background-color: black;
+        color: white;
+    }
+    .grouping-div{
+        display: flex;
+        border: 5px solid #3c3a74;
+        background-color: black;
+        color: white;
+        width: 20vw;
+        margin: 0 auto;
+    }
+    #sumb-button{
+        height: 2.4rem;
+        border: 5px solid #3c3a74;
+        background-color: #3c3a74;
+        color: white;
+        width: 2.7rem;
+        text-decoration: none;
+        font-size: 16pt;
+    }
+    body{
+        background-color: black;
+        color: white;
+    }
+</style>
+</html>

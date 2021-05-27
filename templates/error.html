@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Error {{title}}</title>
+<meta charset="UTF-8">
+<base href=".">
+<link rel="shortcut icon" href="..{{ url_for('static', filename='favicon.ico') }}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+<body style="color: white; background-color: black; font-family: 'Permanent Marker', cursive;">
+   <div style='width: 50vw; height: 20vh'></div>
+   <h1 style="margin: 0 auto; text-align:center; width: 100%; font-size: 32pt ">An error occured:</h1>
+   <h3 style="margin: 0 auto; text-align:center; width: 100%; font-size: 24pt ">{{error}}</h3>
+      <div style="width: 50vw; margin: 0 auto;">
+         <div style="margin: 0 auto; width: 35vw; display: flex; flex-direction: row;">
+            <p style="text-align:justify; width: 70%; line-height: 2rem; margin: 0 auto;">{{body}}</p>
+            {% if image%}<img src="../static/graphics/{{image}}" style="height: 30vh">{%endif%}
+         </div>
+         {% if body2%}<p style="text-align:justify; width: 35vw; line-height: 2rem; margin-left: 12.75vw;">{{body2}}</p>{%endif%}
+      </div>
+   {% if url %}<a style="display: block; margin: 0 auto; text-align:center; width: 100%; font-size: 24pt " href="{{url}}">Back to list</a> {%endif%}
+</body>
+<script type="module">
+</script>
+</html>
